@@ -1,0 +1,87 @@
+body{
+    background-color: whitesmoke;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 0.5px solid whitesmoke ;
+    background-color: rgb(253, 250, 250);
+    box-shadow: 2px 5px 10px rgb(211, 208, 208);
+    position: relative;
+  }
+  
+  .hour-hand,
+  .minute-hand,
+  .second-hand {
+    width: 1%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    transform-origin: bottom;
+    z-index: 2;
+    border-radius: 2em;
+  }
+  
+  .hour-hand {
+    background-color: blue !important;
+    height: 25% !important;
+  }
+  
+  .minute-hand{
+    height: 35%;
+    background-color: black;
+  }
+  
+  .second-hand {
+    width: 1px;
+    height: 90px;
+    background-color: red;
+    transform-origin: 50% 85%;
+  }
+  
+  .center-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+
+  .digital{
+    border: 2px solid rgb(176, 200, 245);
+    border-radius: 5px;
+    padding: 2%;
+    height: 5vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 2rem;
+    font-family: sans-serif;
+    color: rgb(122, 162, 236) ;
+  }
+
+  .digital div{
+    transition: 0.9s;
+  }
+
+  .digital-minutes{
+    padding-inline : 1vw;
+    text-align: center;
+  }
